@@ -98,7 +98,7 @@ NSUInteger COUNT = 0;
     self.pageControl.currentPage = self.currentPicIndex;
 
     //  设置时钟动画 定时器
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(update:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:_duration target:self selector:@selector(update:) userInfo:nil repeats:YES];
     //  将定时器添加到主线程
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }

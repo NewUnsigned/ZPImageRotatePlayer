@@ -84,15 +84,10 @@
 		752249B71AFE749B000DA7FA /* 图片轮播器 */ = {
 			isa = PBXGroup;
 			children = (
+				75224A1A1AFF53EF000DA7FA /* Demo */,
+				75224A191AFF53D1000DA7FA /* ZPImageRotatePlayer */,
 				752249BC1AFE749B000DA7FA /* AppDelegate.h */,
 				752249BD1AFE749B000DA7FA /* AppDelegate.m */,
-				752249BF1AFE749B000DA7FA /* ViewController.h */,
-				752249C01AFE749B000DA7FA /* ViewController.m */,
-				752249C21AFE749B000DA7FA /* Main.storyboard */,
-				75224A161AFF40F4000DA7FA /* ZPImageRotateScrollView.h */,
-				75224A171AFF40F4000DA7FA /* ZPImageRotateScrollView.m */,
-				752249C51AFE749B000DA7FA /* Images.xcassets */,
-				752249C71AFE749B000DA7FA /* LaunchScreen.xib */,
 				752249B81AFE749B000DA7FA /* Supporting Files */,
 			);
 			path = "图片轮播器";
@@ -101,6 +96,9 @@
 		752249B81AFE749B000DA7FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				752249C71AFE749B000DA7FA /* LaunchScreen.xib */,
+				752249C51AFE749B000DA7FA /* Images.xcassets */,
+				752249C21AFE749B000DA7FA /* Main.storyboard */,
 				752249B91AFE749B000DA7FA /* Info.plist */,
 				752249BA1AFE749B000DA7FA /* main.m */,
 			);
@@ -122,6 +120,24 @@
 				752249D31AFE749C000DA7FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75224A191AFF53D1000DA7FA /* ZPImageRotatePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				75224A161AFF40F4000DA7FA /* ZPImageRotateScrollView.h */,
+				75224A171AFF40F4000DA7FA /* ZPImageRotateScrollView.m */,
+			);
+			name = ZPImageRotatePlayer;
+			sourceTree = "<group>";
+		};
+		75224A1A1AFF53EF000DA7FA /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				752249BF1AFE749B000DA7FA /* ViewController.h */,
+				752249C01AFE749B000DA7FA /* ViewController.m */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

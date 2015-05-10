@@ -11,4 +11,6 @@
 @interface ZPImageRotateScrollView : UIView
 ///  存放将要播放图片的数组
 @property (nonatomic, strong) NSArray *picArr;
+///  图片轮播间隔
+@property (nonatomic, assign) double duration;
 @end
