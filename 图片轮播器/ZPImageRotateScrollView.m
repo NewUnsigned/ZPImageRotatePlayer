@@ -23,13 +23,6 @@
 
 @implementation ZPImageRotateScrollView
 
-- (instancetype)init
-{
-    if (self =[super init]) {
-        _picArr = [[NSArray alloc]init];
-    }
-    return self;
-}
 - (void)setPicArr:(NSArray *)picArr
 {
     _picArr = picArr;
