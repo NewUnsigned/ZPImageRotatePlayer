@@ -14,6 +14,7 @@
 		752249C61AFE749B000DA7FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752249C51AFE749B000DA7FA /* Images.xcassets */; };
 		752249C91AFE749B000DA7FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752249C71AFE749B000DA7FA /* LaunchScreen.xib */; };
 		752249D51AFE749C000DA7FA /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 752249D41AFE749C000DA7FA /* _____Tests.m */; };
+		75224A181AFF40F4000DA7FA /* ZPImageRotateScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75224A171AFF40F4000DA7FA /* ZPImageRotateScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		752249CE1AFE749C000DA7FA /* 图片轮播器Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "图片轮播器Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752249D31AFE749C000DA7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752249D41AFE749C000DA7FA /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
+		75224A161AFF40F4000DA7FA /* ZPImageRotateScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPImageRotateScrollView.h; sourceTree = "<group>"; };
+		75224A171AFF40F4000DA7FA /* ZPImageRotateScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPImageRotateScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				752249BF1AFE749B000DA7FA /* ViewController.h */,
 				752249C01AFE749B000DA7FA /* ViewController.m */,
 				752249C21AFE749B000DA7FA /* Main.storyboard */,
+				75224A161AFF40F4000DA7FA /* ZPImageRotateScrollView.h */,
+				75224A171AFF40F4000DA7FA /* ZPImageRotateScrollView.m */,
 				752249C51AFE749B000DA7FA /* Images.xcassets */,
 				752249C71AFE749B000DA7FA /* LaunchScreen.xib */,
 				752249B81AFE749B000DA7FA /* Supporting Files */,
@@ -221,6 +226,7 @@
 			files = (
 				752249C11AFE749B000DA7FA /* ViewController.m in Sources */,
 				752249BE1AFE749B000DA7FA /* AppDelegate.m in Sources */,
+				75224A181AFF40F4000DA7FA /* ZPImageRotateScrollView.m in Sources */,
 				752249BB1AFE749B000DA7FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +422,7 @@
 				752249DA1AFE749C000DA7FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		752249DB1AFE749C000DA7FA /* Build configuration list for PBXNativeTarget "图片轮播器Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				752249DD1AFE749C000DA7FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
