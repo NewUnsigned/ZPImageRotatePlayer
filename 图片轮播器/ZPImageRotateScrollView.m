@@ -22,6 +22,7 @@
 @end
 
 @implementation ZPImageRotateScrollView
+
 - (instancetype)init
 {
     if (self =[super init]) {
@@ -40,11 +41,12 @@
 {
     UIPageControl *pageControl = [[UIPageControl alloc]init];
     pageControl.numberOfPages = self.picArr.count;
-    pageControl.center = self.center;
-    CGRect tempFrame = pageControl.frame;
-    tempFrame.origin.y = self.frame.size.height * ZP_PageControl_Location;
-    pageControl.frame = tempFrame;
 
+    CGFloat pageW = pageControl.frame.size.width;
+    CGFloat pageH = pageControl.frame.size.height;
+    CGFloat pageX = (self.frame.size.width - pageW) * 0.5;
+    CGFloat pageY = self.frame.size.height * ZP_PageControl_Location;
+    pageControl.frame = CGRectMake(pageX, pageY, pageW, pageH);
     self.pageControl = pageControl;
     [self addSubview:pageControl];
 }
@@ -54,8 +56,8 @@ NSUInteger COUNT = 0;
 - (void)setPicsAndTimer
 {
     self.scrollView = [[UIScrollView alloc]init];
-    self.scrollView.frame = self.frame;
     [self addSubview:self.scrollView];
+    self.scrollView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     COUNT = self.picArr.count - 1;
     if (COUNT == 0) return;
     CGFloat width = self.frame.size.width;
@@ -70,6 +72,7 @@ NSUInteger COUNT = 0;
     self.scrollView.delegate = self;
     //  设置是否有边界
     self.scrollView.bounces = NO;
+    
     //  初始化当前视图
     UIImageView *currentImageView =[[UIImageView alloc] init];
     currentImageView.image = [UIImage imageNamed:self.picArr[0]];
@@ -77,6 +80,7 @@ NSUInteger COUNT = 0;
     self.currentImageView = currentImageView;
     self.currentImageView.frame = CGRectMake(width, 0, width, height);
     self.currentImageView.contentMode = UIViewContentModeScaleAspectFill;
+
     //  初始化下一个视图
     UIImageView *nextImageView = [[UIImageView alloc] init];
     nextImageView.image = [UIImage imageNamed:self.picArr[1]];
