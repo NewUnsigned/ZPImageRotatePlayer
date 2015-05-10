@@ -10,6 +10,8 @@
     CGFloat scrY = 20;
     //设置frame
     self.scrView.frame = CGRectMake(scrX,scrY,scrW,scrH);
+    //设置播放间隔
+    self.scrView.duration = 1.0;
     //将需要播放的图片放入picArr数组中
     //图片名称可以随意
     self.scrView.picArr = @[@"img_01",@"img_02",@"img_03",@"img_04",@"img_05"];
