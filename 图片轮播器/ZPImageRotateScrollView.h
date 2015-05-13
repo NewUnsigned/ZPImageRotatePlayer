@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum
+{
+    ScrollDiractionLeft = 1,
+    ScrollDiractionRight = -1,
+    
+}ScrollDiractionType;
+
 @interface ZPImageRotateScrollView : UIView
 ///  存放将要播放图片的数组
 @property (nonatomic, strong) NSArray *picArr;
 ///  图片轮播间隔
 @property (nonatomic, assign) double duration;
+///  图片轮播器滚动方向
+@property (nonatomic, assign) ScrollDiractionType ScrollDiraction;
 @end

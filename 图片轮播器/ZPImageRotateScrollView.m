@@ -10,6 +10,8 @@
 
 #define ZP_PageControl_Location 0.94
 
+
+
 @interface ZPImageRotateScrollView () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIPageControl *pageControl;        // 页面指示器
 @property (nonatomic,strong)  UIScrollView  *scrollView;         // 图片滚动视图
@@ -23,6 +25,8 @@
 
 @implementation ZPImageRotateScrollView
 
+
+
 - (void)setPicArr:(NSArray *)picArr
 {
     _picArr = picArr;
@@ -34,7 +38,9 @@
 {
     UIPageControl *pageControl = [[UIPageControl alloc]init];
     pageControl.numberOfPages = self.picArr.count;
-
+    //非当前图片的页面指示器圆点颜色
+    pageControl.pageIndicatorTintColor = [UIColor redColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blueColor];
     CGFloat pageW = pageControl.frame.size.width;
     CGFloat pageH = pageControl.frame.size.height;
     CGFloat pageX = (self.frame.size.width - pageW) * 0.5;
@@ -99,7 +105,8 @@ NSUInteger COUNT = 0;
     //定时移动
     if (_isDragging == YES) return;
     CGPoint offSet = self.scrollView.contentOffset;
-    offSet.x += offSet.x;
+    if (!_ScrollDiraction) _ScrollDiraction = ScrollDiractionLeft;
+    offSet.x += offSet.x * _ScrollDiraction;
     [self.scrollView setContentOffset:offSet animated:YES];
     
     if (offSet.x >= self.frame.size.width * 2) {
