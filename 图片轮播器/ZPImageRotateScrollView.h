@@ -22,4 +22,8 @@ typedef enum
 @property (nonatomic, assign) double duration;
 ///  图片轮播器滚动方向
 @property (nonatomic, assign) ScrollDiractionType ScrollDiraction;
+///  非当前图片指示器颜色
+@property (nonatomic, strong) UIColor *otherIndicatorColor;
+///  当前页面指示器颜色
+@property (nonatomic, strong) UIColor *currentPageIndicatorColor;
 @end

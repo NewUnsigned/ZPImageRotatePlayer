@@ -39,8 +39,12 @@
     UIPageControl *pageControl = [[UIPageControl alloc]init];
     pageControl.numberOfPages = self.picArr.count;
     //非当前图片的页面指示器圆点颜色
-    pageControl.pageIndicatorTintColor = [UIColor redColor];
-    pageControl.currentPageIndicatorTintColor = [UIColor blueColor];
+    if (_otherIndicatorColor) {
+        pageControl.pageIndicatorTintColor = _otherIndicatorColor;
+    }
+    if (_currentPageIndicatorColor) {
+        pageControl.currentPageIndicatorTintColor = _currentPageIndicatorColor;
+    }
     CGFloat pageW = pageControl.frame.size.width;
     CGFloat pageH = pageControl.frame.size.height;
     CGFloat pageX = (self.frame.size.width - pageW) * 0.5;
